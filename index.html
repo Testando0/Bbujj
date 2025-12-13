@@ -21,17 +21,17 @@
 
     <header class="hero" id="download">
         <div class="hero-content">
-            <span class="badge">Versão 2.0 • Android</span>
-            <h1>A Inteligência Artificial <br><span class="gradient-text">Na Palma da Mão</span></h1>
-            <p>Leve o poder da CRISALIDA IA para onde você for. O aplicativo oficial para Android com processamento neural otimizado e segurança total.</p>
+            <span class="badge">Versão 1.0 • Android</span>
+            <h1>A Inteligência Artificial <br><span class="gradient-text">Na Palma Da Mão</span></h1>
+            <p>Leve O Poder Da CRISALIDA IA Para Onde Você For. O aplicativo Oficial Para Android Com Processamento Neural Otimizado E Segurança Total.</p>
             
             <div class="cta-group">
                 <button id="downloadBtn" class="btn-primary" onclick="iniciarDownload()">
-                    <span class="icon">🤖</span> Baixar APK Atualizado
+                    <span class="icon">💫</span> Baixar Atualizado
                 </button>
                 <div id="statusMessage" class="status-msg"></div>
             </div>
-            <p class="small-text">Requer Android 8.0+ • 45MB • Verificado</p>
+            <p class="small-text">Requer Android 8.0+ • 1MB • Verificado</p>
         </div>
         
         <div class="hero-visual mobile-mockup">
@@ -43,22 +43,22 @@
     </header>
 
     <section id="install" class="tutorial">
-        <h2 class="section-title">Como Instalar o <span class="gradient-text">APK</span></h2>
+        <h2 class="section-title">Como Instalar A <span class="gradient-text">Crisálida</span></h2>
         <div class="steps-container">
             <div class="step-card">
                 <div class="step-number">01</div>
-                <h4>Faça o Download</h4>
-                <p>Clique no botão acima. Se o navegador avisar que o arquivo pode ser nocivo, clique em <strong>"Manter mesmo assim"</strong>.</p>
+                <h4>Faça O Download</h4>
+                <p>Clique No Botão Acima. Se O Navegador Avisar Que O Arquivo Pode Ser Nocivo, Clique Em <strong>"Manter Mesmo Assim"</strong>.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">02</div>
-                <h4>Permita a Instalação</h4>
-                <p>Ao abrir o arquivo, se pedido, vá em Configurações e autorize <strong>"Fontes Desconhecidas"</strong>.</p>
+                <h4>Permita A Instalação</h4>
+                <p>Ao Abrir O Arquivo, Se Pedido, Vá Em Configurações E Autorize <strong>"Fontes Desconhecidas"</strong>.</p>
             </div>
             <div class="step-card">
                 <div class="step-number">03</div>
-                <h4>Acesse a Crisalida</h4>
-                <p>Instalação concluída! Abra o app, faça seu login e comece a usar a IA.</p>
+                <h4>Acesse A Crisalida</h4>
+                <p>Instalação Concluída! Abra O App E Comece A Usar A IA.</p>
             </div>
         </div>
     </section>
@@ -66,20 +66,20 @@
     <section id="features" class="features">
         <div class="card">
             <h3>⚡ Modo Turbo</h3>
-            <p>Otimizado para gastar menos bateria enquanto processa dados complexos no seu dispositivo.</p>
+            <p>Otimizado Para Gastar Menos Bateria Enquanto Processa Dados Complexos No Seu Dispositivo.</p>
         </div>
         <div class="card">
             <h3>🔒 Criptografia Militar</h3>
-            <p>Seus dados e conversas são protegidos de ponta a ponta. Privacidade total.</p>
+            <p>Seus Dados E Conversas São Protegidos De Ponta A Ponta. Privacidade Total.</p>
         </div>
         <div class="card">
-            <h3>📂 Sincronização Cloud</h3>
-            <p>Comece no celular e termine no PC. Tudo sincronizado em tempo real.</p>
+            <h3>🎵 Download De Músicas</h3>
+            <p>Baixe Suas Músicas Preferidas De Forma Rápida E Prática.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Crisalida AI Technologies. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Redzin. Todos Os Direitos Reservados.</p>
     </footer>
 
     <script>
@@ -100,18 +100,18 @@
             btn.style.opacity = "0.7";
             btn.style.cursor = "wait";
             
-            msg.textContent = "Preparando conexão segura...";
+            msg.textContent = "Preparando Conexão Segura...";
             msg.style.color = "#a0a0a0";
 
             setTimeout(() => {
                 // Mensagem de alerta sobre APK
-                msg.textContent = "Se aparecer um aviso, confirme o download.";
+                msg.textContent = "Se Aparecer Um Aviso, Confirme O Download.";
                 msg.style.color = "#f1c40f"; // Amarelo
 
                 // Cria o link invisível para forçar download
                 const link = document.createElement('a');
                 link.href = directLink;
-                link.setAttribute('download', 'Crisalida_IA_v2.apk'); 
+                link.setAttribute('download', 'Crisalida_IA.apk'); 
                 link.style.display = 'none';
                 document.body.appendChild(link);
                 
