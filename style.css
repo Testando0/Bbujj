@@ -1,0 +1,380 @@
+:root {
+    --bg-color: #0a0a0f;
+    --text-color: #e0e0e0;
+    --primary-color: #6c5ce7;
+    --secondary-color: #00cec9;
+    --accent: #fd79a8;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Tipografia e Efeitos */
+h1, h2, h3, .logo, .step-number {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(10, 10, 15, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    border: 1px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.btn-nav:hover {
+    background: var(--primary-color);
+    color: white !important;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.4);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10% 0;
+    position: relative;
+    background: radial-gradient(circle at 80% 50%, rgba(108, 92, 231, 0.15), transparent 60%);
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.badge {
+    background: rgba(108, 92, 231, 0.15);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(108, 92, 231, 0.3);
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* Botão Principal */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #4834d4);
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(108, 92, 231, 0.5);
+    filter: brightness(1.1);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.status-msg {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    min-height: 20px;
+    font-weight: 500;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Visual do Celular (CSS Pure) */
+.mobile-mockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.phone-shape {
+    width: 260px;
+    height: 520px;
+    border: 8px solid #1a1a20;
+    border-radius: 45px;
+    position: relative;
+    background: #000;
+    box-shadow: 0 0 60px rgba(108, 92, 231, 0.2);
+    overflow: hidden;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 25px;
+    background: #1a1a20;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 5;
+}
+
+.screen-glow {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(108,92,231,0.25), rgba(0,0,0,0) 60%);
+    position: relative;
+}
+
+.screen-glow::after {
+    content: 'CRISALIDA';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Orbitron';
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.1);
+    letter-spacing: 2px;
+}
+
+/* Seção Tutorial */
+.tutorial {
+    padding: 100px 10%;
+    background: #0d0d12;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.05);
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+}
+
+.step-number {
+    font-size: 3rem;
+    color: rgba(255,255,255,0.05);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: 900;
+}
+
+.step-card h4 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.step-card p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 80px 10%;
+    background: var(--bg-color);
+}
+
+.card {
+    background: var(--glass);
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #444;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    background: #050508;
+}
+
+/* Responsivo (Mobile) */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 120px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    
+    .hero-content {
+        margin-bottom: 50px;
+    }
+
+    .mobile-mockup {
+        display: none; /* Ocultar mockup em tablets verticais para economizar espaço */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none; /* Menu simplificado */
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+    
+    .step-card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 901px) {
+    /* Exibir mockup apenas em telas maiores */
+    .mobile-mockup {
+        display: flex;
+    }
+}
